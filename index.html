@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> Music Player </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+      
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+      
+    </head>
+    <body background="Beautiful.jpg";>
+        <center>
+            <h2> Music Editor
+                <br> <br>
+                <span id="um">
+                    Note - Get Your Left Hand In Front Of The Webcam To Play Paralyzed, Do The Same Thing With Your Right Hand To Play Happy Face
+                </span>
+            </h2>
+            <br>
+            <button type="button" id="button" class="btn" onclick="play()"> Play </button>
+            <br>
+        </center>
+        <script src="main.js"> </script>
+    </body>
+</html>
+
+<style>
+    body{
+        background-size:cover;
+    }
+
+    h2{
+        color:lightgrey;
+        padding:15px;
+        border-radius:15px;
+        border-width:10px;
+        border-color:lightblue;
+        border-style:solid;
+    }
+
+    #button{
+        height:50px;
+        width:150px;
+        font-size:20px;
+        background-color:skyblue;
+        color:grey;
+    }
+
+    canvas{
+        border-width:10px;
+        border-radius:15px;
+        border-style:solid;
+        border-color:white;
+        box-shadow:5px 5px 5px skyblue;
+        margin-left:515px;
+        margin-top:31px;
+    }
+</style>
