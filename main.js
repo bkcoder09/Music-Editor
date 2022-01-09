@@ -4,6 +4,9 @@ happy_face = "";
 leftX = 0;
 leftY = 0;
 
+leftScore = 0;
+paralyzed_status = "";
+
 rightX = 0;
 rightY = 0;
 
@@ -37,9 +40,22 @@ function gotPoses(){
         rightX = results[0].pose.rightWrist.x;
         rightY = results[0].pose.rightWrist.y;
         console.log("Right Wrist X - "+rightX+" Right Wrist Y - "+rightY);
+
+        leftScore = results[0].pose.keypoints[9].score;
     }
 }
 
 function draw(){
     image(video, 0, 0, 500, 400);
+    paralyzed_status = paralyzed.isPlaying();
+    fill("#dc7aff");
+    stroke("#ffffff");
+    if(leftScore > 0.2){
+        circle(leftX, leftY, 20);
+        happy_face.stop();
+        if(paralyzed=="false"){
+            paralyzed.play();
+            document.getElementById("button").innerHTML = "Song - Paralyzed by Sueco";
+        }
+    }
 }
